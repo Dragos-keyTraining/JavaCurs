@@ -8,8 +8,7 @@ public class ExceptionExample4 {
 		Scanner scan = new Scanner(System.in);
 		int num1, num2, result;
 		
-		while(true) {
-		
+		while(true) {	
 			System.out.println("Please enter number 1:");
 			try {
 				//Integer.parseInt()
@@ -18,7 +17,10 @@ public class ExceptionExample4 {
 				System.out.println("Please enter only numeric values");
 				 continue;
 			}
-
+			if(num1 == 0 ) {
+				System.out.println("One of the numbers is 0");
+				continue;
+			}
 			while(true) {
 				System.out.println("Please enter number 2:");
 				try {
@@ -28,15 +30,13 @@ public class ExceptionExample4 {
 					 continue;
 				}
 				break;
-			}
-			
-			if(num1 == 0 || num2 == 0) {
+			}	
+			if(num2 == 0) {
 				System.out.println("One of the numbers is 0");
 				continue;
 			}
 		    result = num1/num2;
 		    System.out.println("Result : " + result);
-			
 		    break;
 		}
 
