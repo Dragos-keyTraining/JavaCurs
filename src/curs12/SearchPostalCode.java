@@ -19,11 +19,23 @@ public class SearchPostalCode {
 		Scanner scan = new Scanner(System.in);
 		CoduriPostale cp =  new CoduriPostale();
 		//System.out.println(cp.map);
+		String oras = "";
 		
-		System.out.println("Introdu un cod postal: ");
-		int codPostal =  scan.nextInt();
+		while(oras.equals("")) {
+			
+			System.out.println("Introdu un cod postal: ");
+			int codPostal =  scan.nextInt();
+			
+			try {
+				oras = cp.gasesteOras(codPostal);
+				System.out.println(oras);		
+				//break;
+			}catch(PostalCodeException e) {
+				System.out.println(e.getMessage());
+			}
+		}
 		
-		System.out.println(cp.gasesteOras(codPostal));
+
 		
 		
 	}
