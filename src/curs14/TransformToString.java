@@ -27,7 +27,7 @@ public class TransformToString {
 		//System.out.println(str.toString());
 		System.out.println(String.valueOf(str));
 		
-		
+		//modificare pe master
 	}
 
 }
